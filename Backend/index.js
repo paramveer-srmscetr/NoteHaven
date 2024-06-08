@@ -1,12 +1,15 @@
 const express = require('express');
 const connectToMongo = require('./db');
 const { query, validationResult } = require('express-validator');
+var cors = require('cors')
 const startServer = async () => {
     await connectToMongo();
     
     const app = express();
     app.use(express.json());
-
+  
+     
+    app.use(cors())
     // Middleware and route setup
  
 app.use('/api/auth',require('./routes/auth'))

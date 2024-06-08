@@ -47,17 +47,19 @@ const [note, setnote] = useState({title:"",description:"",tag:"default"})
               onChange={onchange}
             />
           </div>
-          {/* <div className="mb-3">
-            <label for="exampleFormControlTextarea1" className="form-label">
-              Example textarea
+          <div className="mb-3">
+            <label htmlFor="tag" className="form-label">
+              Tag
             </label>
-            <textarea
+            <input
+              type="text"
               className="form-control"
-              id="exampleFormControlTextarea1"
-              rows="3"
-              onchange={onchange}
-            ></textarea>
-          </div> */}
+              id="tag"
+              name='tag'
+              onChange={onchange}
+            />
+          </div>
+         
           <button type="button" className="btn btn-primary" onClick={handlerClick}>
             AddNote
           </button>
