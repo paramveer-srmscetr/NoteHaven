@@ -3,14 +3,15 @@ import noteContext from '../context/notes/noteContext';
 
 function AddNote() {
 
-const [note, setnote] = useState({title:"",description:"",tag:"default"})
+const [note, setnote] = useState({title:"",description:"",tag:""})
     const context=useContext(noteContext)
     const {addNote }=context;
    
     const handlerClick=(e)=>{
         e.preventDefault();
         addNote(note.title,note.description,note.tag);
-    }
+        setnote({title:" ",description:" " ,tag:" "})
+      }
 
     const onchange=(e)=>{
     setnote({...note,[e.target.name]: e.target.value})
@@ -32,6 +33,7 @@ const [note, setnote] = useState({title:"",description:"",tag:"default"})
               className="form-control"
               id="title"
               name='title'
+              value={note.title}
               onChange={onchange}
             />
           </div>
@@ -44,6 +46,7 @@ const [note, setnote] = useState({title:"",description:"",tag:"default"})
               className="form-control"
               id="description"
               name='description'
+              value={note.description}
               onChange={onchange}
             />
           </div>
@@ -56,6 +59,7 @@ const [note, setnote] = useState({title:"",description:"",tag:"default"})
               className="form-control"
               id="tag"
               name='tag'
+              value={note.tag}
               onChange={onchange}
             />
           </div>
