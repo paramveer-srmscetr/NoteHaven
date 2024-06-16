@@ -14,12 +14,14 @@ function NoteItem(props) {
               className="fa-regular fa-trash-can mx-2"
               onClick={() => {
                 deleteNote(note._id);
+                props.showAlert("Note delete successfully", "success")
               }}
             ></i>
             <i
               className="far fa-edit mx-2"
               onClick={() => {
                 updateNote(note);
+              
               }}
             ></i>
           </div>
