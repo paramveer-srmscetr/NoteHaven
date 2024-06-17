@@ -7,6 +7,7 @@ import NoteState from './context/notes/NotesState';
 import Alert from './components/Alert';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Footer from './components/Footer';
 import ProtectedRoute from './components/ProtectedRoute';  // Import the ProtectedRoute component
 import { useState } from 'react';
 
@@ -38,6 +39,7 @@ function App() {
               {/* Add other routes here */}
             </Routes>
           </div>
+          <Footer/>
         </Router>
       </NoteState>
     </>
