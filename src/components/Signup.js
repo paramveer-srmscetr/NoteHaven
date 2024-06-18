@@ -37,9 +37,10 @@ const Signup = (props) => {
   };
 
   return (
-    <div>
+    <div  className="mt-3">
+      <h2>Signup to use NoteHeaven 📃</h2>
       <form onSubmit={handleSubmit}>
-        <div className="mb-3">
+        <div className="mb-3 pt-2">
           <label htmlFor="name" className="form-label">
             Username
           </label>

@@ -30,9 +30,10 @@ const Login = ({ showAlert }) => {
   };
 
   return (
-    <div>
+    <div className='mt-3'>
+      <h2>Login to continue 🛅</h2>
       <form onSubmit={handleSubmit}>
-        <div className="mb-3">
+        <div className="mb-3 pt-2">
           <label htmlFor="email" className="form-label">Email address</label>
           <input type="email" className="form-control" id="email" name="email" value={credentials.email} onChange={onChange} />
         </div>

@@ -22,10 +22,10 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark m-2 p-2">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-         NoteHeaven
+         NoteHeaven📝
         </Link>
         <button
           className="navbar-toggler"
